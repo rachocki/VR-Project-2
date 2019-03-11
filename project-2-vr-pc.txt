@@ -1,0 +1,36 @@
+// TODO: 
+//		- write start methods [orient camera, set object position, other initializations]
+//		- write update methods [tracked points, object checks, timer, falling vs. floating logic]
+//		- write drop/float methods (May or may not actually be methods, might just be internal logic of update.]
+//		- implement tracking/rigidbodies
+//		- implement challenge elements
+//		- menus
+
+// The floating object can be in 3 different states: resting, floating, or falling. 
+//	resting: it is at rest and has not floated before. default.
+//	floating: within view cylinder and following some motion path.
+//	falling: no longer in the cylinder and under the effect of gravity.
+
+// WORKING: NA
+// NOT WORKING: NA
+// NOT IMPLEMENTED: Everything.
+
+//On start: 
+//	Orient in-world camera to match HMD. Attach view cylinder to camera rig and HMD tracking.
+//	Set 'floating' object position to our chosen default position. 
+//	Set timer to 0 seconds.
+
+//On update:
+//	Update tracked points
+//	Check if game over (if yes, then stop, display final timer. if no, continue.)
+//	Check if object is within view cylinder.
+//		if yes: continue or resume float path (if it's just starting floating, or if a drop just started, resume from current position)
+//		if no: start or continue drop
+//	Update object locations based on above.
+//	Continue to increment timer.
+
+//When Drop Starts: If the object is no longer within the view cylinder, enable gravity(?) and pause the timer.
+
+//Game over condition: when the object falls to the tabletop again, i.e. when it is falling and then goes below a certain height?
+
+//After certain times, add in challenge elements (ex. after 15 seconds, increase movement speed, after 30 add jumpscare, etc.)
