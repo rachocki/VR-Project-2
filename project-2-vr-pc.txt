@@ -22,14 +22,14 @@
 
 //On update:
 //	Update tracked points
-//	Check if game over (if yes, then stop, display final timer. if no, continue.)
+//	Check if game over (if yes, then stop game and display final timer. if no, continue.)
 //	Check if object is within view cylinder.
-//		if yes: continue or resume float path (if it's just starting floating, or if a drop just started, resume from current position)
+//		if yes: continue or resume float path (if it's just starting floating, or if a drop just started,
+//      resume from current position), increment timer.
 //		if no: start or continue drop
 //	Update object locations based on above.
-//	Continue to increment timer.
 
-//When Drop Starts: If the object is no longer within the view cylinder, enable gravity(?) and pause the timer.
+//When Drop Starts: If the object is no longer within the view cylinder, enable gravity on object(?) and pause the timer.
 
 //Game over condition: when the object falls to the tabletop again, i.e. when it is falling and then goes below a certain height?
 
